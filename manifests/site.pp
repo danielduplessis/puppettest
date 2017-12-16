@@ -57,7 +57,7 @@ node default {
   service {"ntp":
     ensure => running
   }
-  file {"'/etc/motd":
+  file {"/etc/motd":
     content => "Property of XYZ",
     ensure  => file
   
