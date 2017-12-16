@@ -35,6 +35,7 @@ node default {
     uid        => '56568',
     home       => '/bin/mytestuser',
     managehome => true,  
+    password   => '$1$i5J5Tglk$680SvotX0p/iw7Tvhv99o.',
   }
   
   notify{"default mess":
