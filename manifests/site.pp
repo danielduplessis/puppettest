@@ -29,4 +29,16 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  
+  user {"mytestuser":
+    ensure     => present,
+    uid        => '56568',
+    home       => '/bin/mytestuser',
+    managehome => true,  
+  }
+  
+  notify{"default mess":
+     message  => "hello, I just got logged"
+  }
+  
 }
