@@ -41,5 +41,26 @@ node default {
   notify{"default mess":
      message  => "hello, I just got logged"
   }
+   
+  package {"tree":
+    ensure => present
+  }
+  package {"wget":
+    ensure => present
+  }
+  package {"ntp":
+    ensure => present
+  }
+  package {"git":
+    ensure => present
+  }  
+  service {"ntp":
+    ensure => running
+  }
+  file {"'/etc/motd":
+    content => "Property of XYZ",
+    ensure  => file
+  
+  }
   
 }
